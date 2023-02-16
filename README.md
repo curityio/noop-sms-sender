@@ -1,9 +1,9 @@
-# REST SMS Plug-in
+# SMS Noop Sender Plug-in
 
 [![Quality](https://img.shields.io/badge/quality-demo-red)](https://curity.io/resources/code-examples/status/)
 [![Availability](https://img.shields.io/badge/availability-source-blue)](https://curity.io/resources/code-examples/status/)
 
-This project provides an open source sms sender plugin for the Curity Identity Server. The only functionality of this plugin is to print the sms to be sent to the log on info level.
+This project provides an open source sms sender plugin for the Curity Identity Server. The only functionality of this plugin is to print the sms to be sent to the log on info level, to be used for debug purposes.
 
 ## Building the Plugin
 

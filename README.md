@@ -11,8 +11,8 @@ You can build the plugin by issue the command `./gradlew dist`. This will produc
 
 ## Installing the Plugin
 
-To install the plugin, copy the contents of the `authenticators.device-secret` folder into `${IDSVR_HOME}/usr/share/plugins` on each node, including the admin node. For more information about installing plugins, refer to the [curity.io/plugins](https://support.curity.io/docs/latest/developer-guide/plugins/index.html#plugin-installation). 
-If you are installing on the same machine, make sure that `IDSVR_HOME` is correctly exported in your shell, and iss `./gradlew deploy` to build and copy the correct files.
+To install the plugin, copy the contents of the `sms.noop` folder into `${IDSVR_HOME}/usr/share/plugins` on each node, including the admin node. For more information about installing plugins, refer to the [curity.io/plugins](https://support.curity.io/docs/latest/developer-guide/plugins/index.html#plugin-installation). 
+If you are installing on the same machine, make sure that `IDSVR_HOME` is correctly exported in your shell, and iss `./gradlew dist` to build and copy the correct files.
 
 ## More Information
 

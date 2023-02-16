@@ -47,7 +47,7 @@ task packageJars(type: Copy, dependsOn: jar) {
     into "$project.buildDir/$project.name"
 }
 
-task dist(type: Sync, dependsOn: packageJars) {
+task deploy(type: Sync, dependsOn: packageJars) {
     from "$project.buildDir/$project.name"
     into "$System.env.IDSVR_HOME/usr/share/plugins/$project.name"
 }

@@ -15,7 +15,7 @@
  */
 
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+    id 'org.jetbrains.kotlin.jvm' version '2.2.21'
 }
 
 group = 'io.curity.identityserver.plugins'
@@ -23,8 +23,15 @@ version = '0.0.1-SNAPSHOT'
 
 description = 'NOOP SMS sender plugin for Curity'
 
-sourceCompatibility = 1.17
-targetCompatibility = 1.17
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+kotlin {
+    jvmToolchain(21)
+}
+
 
 repositories {
     mavenCentral()
@@ -32,9 +39,8 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'se.curity.identityserver:identityserver.sdk:8.0.+'
-    compileOnly 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10'
-    compileOnly 'org.slf4j:slf4j-api:2.0.3'
+    compileOnly "se.curity.identityserver:identityserver.sdk:10.6.0"
+    compileOnly "org.slf4j:slf4j-api:2.0.12"
 }
 
 tasks.withType(JavaCompile) {
@@ -51,4 +57,3 @@ task deploy(type: Sync, dependsOn: packageJars) {
     from "$project.buildDir/$project.name"
     into "$System.env.IDSVR_HOME/usr/share/plugins/$project.name"
 }
-

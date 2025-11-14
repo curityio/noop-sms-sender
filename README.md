@@ -7,7 +7,7 @@ This project provides an open source sms sender plugin for the Curity Identity S
 
 ## Building the Plugin
 
-You can build the plugin by issue the command `./gradlew dist`. This will produce a folder in the `build` directory with the plugin JAR file and all the dependencies needed called `sms-sender.noop`, which can be installed.
+You can build the plugin by first issuing the command `gradle wrapper` to generate the Gradle Wrapper. Then issue the command `./gradlew packageJars`, this will produce a folder in the `build` directory with the plugin JAR file and all the dependencies needed called `sms.noop`, which can be installed.
 
 ## Installing the Plugin
 
